@@ -1,0 +1,169 @@
+🧭 Project Style Guide
+1. Purpose
+
+This document defines the visual, structural, and coding standards for the project to ensure consistency across all components, pages, and features.
+It serves as a reference for developers, designers, and contributors working on this repository.
+
+2. Design Principles
+
+Consistency: Maintain uniform spacing, typography, and color usage across the application.
+
+Clarity: Every visual element and line of code should serve a clear purpose.
+
+Accessibility: Follow WCAG AA accessibility guidelines wherever possible.
+
+Scalability: Ensure components are reusable and easily extendable.
+
+3. Color Palette
+Color Name	Usage	Hex Code
+Primary	Buttons, Highlights	#3B82F6
+Secondary	Subtle accents	#9333EA
+Background	Page backgrounds	#FFFFFF
+Text Primary	Default text color	#111827
+Text Secondary	Subdued text	#6B7280
+Error	Alerts and validation errors	#DC2626
+
+🎨 Always use colors from the design token system to maintain consistency.
+
+4. Typography
+
+Primary Font: Inter, sans-serif
+
+Font Sizes:
+
+Heading 1 → 32px / Bold
+
+Heading 2 → 24px / Semi-Bold
+
+Body → 16px / Regular
+
+Caption → 12px / Regular
+
+Line Height: 1.5
+
+Letter Spacing: Normal
+
+Avoid using custom font weights not part of the defined scale.
+
+5. Component Guidelines
+Buttons
+
+Primary Button: Solid background using the primary color, white text.
+
+Secondary Button: Transparent background, bordered with primary color.
+
+Disabled State: Reduced opacity and non-interactive cursor.
+
+Forms
+
+Use rounded corners (border-radius: 8px).
+
+Always include label + helper text.
+
+Show validation messages in red (#DC2626).
+
+Cards
+
+Shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+
+Border radius: 12px
+
+Padding: 16px
+
+6. Code Formatting Rules
+
+Language: TypeScript (preferred)
+
+Linting: ESLint + Prettier
+
+Indentation: 2 spaces
+
+Naming conventions:
+
+Variables: camelCase
+
+Components: PascalCase
+
+Constants: UPPER_SNAKE_CASE
+
+Imports: Group and order by external → internal → relative paths.
+
+Comments: Use // for single-line and /** */ for function or class documentation.
+
+7. Git and Repository Standards
+
+Branch Naming Convention:
+
+feature/<name> → for new features
+
+fix/<name> → for bug fixes
+
+hotfix/<name> → for urgent production fixes
+
+docs/<name> → for documentation changes
+
+Commit Message Format:
+
+<type>(scope): short description
+
+
+Example:
+
+feat(auth): add JWT-based authentication
+fix(ui): resolve header alignment issue
+docs(style-guide): update typography section
+
+
+Pull Request Checklist:
+
+Code linted and formatted
+
+All tests passing
+
+Updated documentation if applicable
+
+8. Accessibility & Responsiveness
+
+Use semantic HTML elements.
+
+Ensure contrast ratios meet WCAG standards.
+
+Components should be fully responsive from 320px (mobile) to 1440px+ (desktop).
+
+9. Image & Icon Usage
+
+Use SVGs for all icons.
+
+Optimize images using TinyPNG or ImageOptim before committing.
+
+Store reusable images in /assets/images/.
+
+10. Version Control
+
+All code changes must go through PR reviews.
+
+Do not commit generated or build files (dist/, node_modules/).
+
+Tag releases following semantic versioning:
+
+v<major>.<minor>.<patch>
+
+11. Example Directory Structure
+/src
+  /components
+  /pages
+  /styles
+  /assets
+  /utils
+  /hooks
+/docs
+  style-guide.md
+  architecture-overview.md
+
+12. References
+
+WCAG Accessibility Guidelines
+
+GitHub Markdown Styling Guide
+
+Figma Design System Reference
